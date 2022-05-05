@@ -2,7 +2,7 @@
     - Album Model
         - title
         - artist
-        - created_at
+        - created_at (auto_add_now)
         - maybe other attributes (my choice)
 
 - Views

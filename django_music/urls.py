@@ -19,5 +19,10 @@ from albums import views as albums_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', albums_views.add_album, name='home_page'),
+    path('', albums_views.list_album, name='home_page'),
+    path('albums/list', albums_views.list_album, name='list_album'),
+    path('albums/add', albums_views.add_album, name='add_album'),
+    path('albums/<int:pk>', albums_views.album_detail, name='album_detail'),
+    path('albums/<int:pk>/delete', albums_views.delete_album, name='delete_album'),
+    path('albums/<int:pk>/edit', albums_views.edit_album, name='edit_album'),
 ]

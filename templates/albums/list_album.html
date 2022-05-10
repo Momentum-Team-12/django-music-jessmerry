@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Django Music</h1>
+
+{% for album in albums %}
+<div>
+    <h2>{{ album.title }}</h2>
+    <h3>{{ album.artist }}</h3>
+    <div>
+        <a href="{% url 'album_detail' album.pk %}">Album Details</a>
+    </div>
+    <a href="{% url 'edit_album' album.pk %}">Edit Album Info</a>
+    <a href="{% url 'delete_album' album.pk %}">Delete Album</a>
+</div>
+{% endfor %}
+{% endblock %}
